@@ -1,7 +1,6 @@
 package co.prog.view.activity.login
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.graphics.Color
 import android.view.View
 import co.prog.R
 import co.prog.base.BaseActivity
@@ -22,14 +21,18 @@ class LoginActivity : BaseActivity(), LoginContract.View, View.OnClickListener {
 
     override fun onClick(v: View) {
         when(v.id){
-            R.id.login_login_button -> presenter.login(login_name_edit.text.toString(),
+            R.id.login_login_button -> presenter.login(login_id_edit.text.toString(),
                 login_pw_edit.text.toString())
         }
     }
 
-    override fun showExistText() {
-        login_name_exist.visibility = View.VISIBLE
+    override fun showErrorTheme() {
+        login_id_exist.visibility = View.VISIBLE
         login_pw_exist.visibility = View.VISIBLE
+        login_id_edit.setBackgroundResource(R.drawable.login_error_background)
+        login_pw_edit.setBackgroundResource(R.drawable.login_error_background)
+        login_id_edit.setTextColor(Color.parseColor("#272727"))
+        login_pw_edit.setTextColor(Color.parseColor("#272727"))
     }
 
     override fun isViewActive(): Boolean = checkActive()

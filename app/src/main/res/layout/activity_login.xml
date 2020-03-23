@@ -28,16 +28,18 @@
     <TextView
         android:id="@+id/login_require_text"
         android:layout_width="wrap_content"
-        android:layout_height="18dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/login_circle_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="15dp"
         android:text="로그인 후 출석체크를 해주세요"
-        android:textColor="@color/colorPrography"/>
+        android:textColor="@color/colorPrography"
+        android:textSize="14sp"
+        android:fontFamily="@font/noto_sans_regular"/>
 
     <TextView
-        android:id="@+id/login_name_text"
+        android:id="@+id/login_id_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/login_require_text"
@@ -46,46 +48,53 @@
         android:layout_marginEnd="20dp"
         android:text="아이디"
         android:textColor="@color/colorGray"
+        android:textSize="12sp"
+        android:fontFamily="@font/noto_sans_regular"
         android:gravity="start"/>
 
     <EditText
-        android:id="@+id/login_name_edit"
+        android:id="@+id/login_id_edit"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        app:layout_constraintTop_toBottomOf="@id/login_name_text"
+        app:layout_constraintTop_toBottomOf="@id/login_id_text"
         android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:hint="아이디를 입력해주세요"
+        android:textCursorDrawable="@drawable/cursor_color"
         android:textSize="14sp"
-        android:textColorHint="@color/colorGray"
-        android:background="@drawable/login_edit_background" />
+        android:textColorHint="#8b8b8b"
+        android:background="@drawable/login_edit_background"
+        android:fontFamily="@font/noto_sans_regular"/>
 
     <TextView
-        android:id="@+id/login_name_exist"
+        android:id="@+id/login_id_exist"
         android:layout_width="match_parent"
-        android:layout_height="16dp"
-        app:layout_constraintTop_toBottomOf="@id/login_name_edit"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/login_id_edit"
         android:layout_marginTop="4dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:visibility="invisible"
         android:text="해당 아이디가 존재하지 않습니다"
         android:textColor="@color/colorPrography"
-        android:textSize="10sp"/>
+        android:textSize="12sp"
+        android:fontFamily="@font/noto_sans_regular"/>
 
     <TextView
         android:id="@+id/login_pw_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/login_name_exist"
+        app:layout_constraintTop_toBottomOf="@+id/login_id_exist"
         android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:text="비밀번호"
         android:textColor="@color/colorGray"
+        android:textSize="12sp"
+        android:fontFamily="@font/noto_sans_regular"
         android:gravity="start"/>
 
     <EditText
@@ -99,14 +108,17 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:hint="비밀번호를 입력해주세요"
+        android:inputType="textPassword"
+        android:textCursorDrawable="@drawable/cursor_color"
         android:textSize="14sp"
-        android:textColorHint="@color/colorGray"
+        android:textColorHint="#8b8b8b"
+        android:fontFamily="@font/noto_sans_regular"
         android:background="@drawable/login_edit_background" />
 
     <TextView
         android:id="@+id/login_pw_exist"
         android:layout_width="match_parent"
-        android:layout_height="16dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/login_pw_edit"
         android:layout_marginTop="4dp"
         android:layout_marginStart="20dp"
@@ -114,7 +126,8 @@
         android:visibility="invisible"
         android:text="비밀번호를 다시 확인해주세요"
         android:textColor="@color/colorPrography"
-        android:textSize="10sp"/>
+        android:fontFamily="@font/noto_sans_regular"
+        android:textSize="12sp"/>
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/login_save_check_box"
@@ -133,18 +146,20 @@
         app:layout_constraintBottom_toBottomOf="@id/login_save_check_box"
         android:textColor="#7d7e82"
         android:textSize="14sp"
+        android:fontFamily="@font/noto_sans_regular"
         android:text="아이디 저장"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/login_login_button"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/login_save_check_box"
         android:layout_marginStart="19dp"
         android:layout_marginEnd="19dp"
         app:backgroundTint="#c3c3c3"
         android:text="로그인"
         android:textSize="16sp"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:fontFamily="@font/noto_sans_bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

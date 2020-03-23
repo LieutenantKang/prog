@@ -12,17 +12,26 @@
         android:layout_height="48dp"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        app:layout_constraintTop_toBottomOf="@id/main_top_layout"
+        android:background="@drawable/layout_shadow"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="27dp"
+        android:includeFontPadding="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="12dp"
-        android:text="P R O G"
+        android:letterSpacing="0.2"
+        android:text="PROG"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrography"/>
+        android:textColor="@color/colorPrography"
+        android:fontFamily="@font/noto_sans_bold"/>
 
     <ImageButton
         android:layout_width="30dp"
@@ -61,7 +70,8 @@
         android:gravity="center"
         android:text="홍길동"
         android:textSize="20sp"
-        android:textColor="#272727"/>
+        android:textColor="#272727"
+        android:fontFamily="@font/noto_sans_regular"/>
 
     <View
         android:id="@+id/main_camera_button"
@@ -85,7 +95,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/main_camera_image"
         android:layout_marginTop="15dp"
         android:layout_marginStart="85dp"
@@ -93,6 +103,7 @@
         android:text="QR코드 촬영하기"
         android:textSize="20dp"
         android:textColor="@color/colorPrography"
+        android:fontFamily="@font/noto_sans_regular"
         android:gravity="center"
         />
 

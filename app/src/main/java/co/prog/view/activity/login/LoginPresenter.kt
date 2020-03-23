@@ -23,6 +23,6 @@ class LoginPresenter(private val view: LoginContract.View, private val context: 
     }
 
     override fun loginFailed() {
-        view.showExistText()
+        view.showErrorTheme()
     }
 }

@@ -7,6 +7,7 @@ import android.view.View
 import co.prog.R
 import co.prog.base.BaseActivity
 import co.prog.view.activity.camera.CameraActivity
+import co.prog.view.activity.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(), MainContract.View, View.OnClickListener {

@@ -12,7 +12,7 @@ interface LoginContract {
     }
 
     interface View: BaseContract.BaseView<Presenter>{
-        fun showExistText()
+        fun showErrorTheme()
     }
 
     interface Presenter: BaseContract.BasePresenter{
